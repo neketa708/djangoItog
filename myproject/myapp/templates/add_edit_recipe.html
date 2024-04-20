@@ -1,0 +1,16 @@
+<!-- add_edit_recipe.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if edit %}Редактировать рецепт{% else %}Добавить рецепт{% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1>{% if edit %}Редактировать рецепт{% else %}Добавить рецепт{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+{% endblock %}

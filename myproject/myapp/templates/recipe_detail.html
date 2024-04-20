@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ recipe.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ recipe.title }}</h1>
+    <p>Автор: {{ recipe.author }}</p>
+    <p>Описание: {{ recipe.description }}</p>
+    <p>Шаги приготовления: {{ recipe.preparation_steps }}</p>
+    <p>Время приготовления: {{ recipe.cooking_time }} мин</p>
+    <!-- Изображение и другие поля рецепта -->
+{% endblock %}
